@@ -1,0 +1,26 @@
+@import 'animate.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #app {
+    @apply w-full h-full bg-gradient-to-br from-pink-300 via-blue-300 to-teal-300 background-animate overflow-hidden;
+}
+
+.background-animate {
+    background-size: 1000%;
+
+    -webkit-animation: AnimationName 30s ease infinite;
+    -moz-animation: AnimationName 30s ease infinite;
+    animation: AnimationName 30s ease infinite;
+}
+
+@keyframes AnimationName {
+    0%, 100% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 50% 100%;
+    }
+}

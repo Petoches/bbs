@@ -1,0 +1,35 @@
+"Indicates what fields are available at the top level of a query operation."
+type Query {
+    "Find a single user by an identifying attribute."
+    post(
+        "Search by primary key."
+        id: ID @eq
+    ): Post @find
+
+    "List multiple posts."
+    posts: [Post!]! @paginate(defaultCount: 10) @orderBy(column: id, direction: DESC)
+}
+
+"Instagram Posts"
+type Post {
+    "Unique primary key."
+    id: ID!
+
+    "the post shortcode"
+    shortcode: String
+
+    "the displayed picture url"
+    display_url: String
+
+    "The video url"
+    video_url: String
+
+    "The post description"
+    description: String
+
+    "Likes count"
+    likes: Int
+
+    "Is a video flag"
+    is_video: Boolean
+}
