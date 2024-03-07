@@ -35,6 +35,7 @@ return [
         'user_agent' => env('INSTAGRAM_USER_AGENT', 'iphone_ua'),
         'x_ig_app_id' => env('INSTAGRAM_X_IG_APP_ID', '936619743392459'),
         'post_count' => env('INSTAGRAM_POST_COUNT', 3),
-        'page' => env('INSTAGRAM_PAGE', 'bbs_agency')
+        'page' => env('INSTAGRAM_PAGE', 'bbs_agency'),
+        'token' => env('INSTAGRAM_TOKEN', 'IGQWRPWFpmQUxGdlFuRWl1MVhxdGd0bTcwZAFY3VHUtNlF6ZAFoxcnk5a1VpaE41RzF5bzk1YXBla2Rmck1qTlJwbmQ4SE9VM05YMHZARcWlhd1VVb2tQTmc2QXVzb3hzRnlmMnVUWG5KRVozMnVjR2IwRmlGUzVPU28ZD'),
     ]
 ];

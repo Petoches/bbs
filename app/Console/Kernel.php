@@ -3,6 +3,8 @@
 namespace App\Console;
 
 use App\Jobs\GetInstagramLatestPosts;
+use App\Jobs\InstagramFetchMedia;
+use App\Jobs\InstagramTokenRefresh;
 use App\Jobs\UpdateInstagramPostsLikes;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
@@ -16,6 +18,8 @@ class Kernel extends ConsoleKernel
     {
         $schedule->job(new UpdateInstagramPostsLikes)->everyFifteenMinutes();
         $schedule->job(new GetInstagramLatestPosts)->hourly();
+        $schedule->job(new InstagramFetchMedia())->hourly();
+        $schedule->job(new InstagramTokenRefresh())->daily();
     }
 
     /**
